@@ -1,13 +1,13 @@
 package OrientacaoObjeto;
 
 public class Caneta {
-	
-	String modelo;
-	String cor;
-	float ponta;
-	int carga;
-	boolean tampada;
-	
+
+	public String modelo;
+	public String cor;
+	private float ponta;
+	protected int carga;
+	private boolean tampada;
+
 	void status() {
 		System.out.println("Modelo: " + this.modelo);
 		System.out.println("Uma caneta " + this.cor);
@@ -15,25 +15,24 @@ public class Caneta {
 		System.out.println("Carga: " + this.carga);
 		System.out.println("Esta tampada? " + this.tampada);
 	}
-	
-	void rabiscar() {
-		if(this.tampada == true) {
+
+	public void rabiscar() {
+		if (this.tampada == true) {
 			System.out.println("ERRO! esta tampada!!");
-		}
-		else {
+		} else {
 			System.out.println("Rabiscando...");
 		}
-		
+
 	}
-	
-	void tampar() {
+
+	public void tampar() {
 		this.tampada = true;
-		
+
 	}
-	
-	void destampar() {
+
+	public void destampar() {
 		this.tampada = false;
-		
+
 	}
 	
 
